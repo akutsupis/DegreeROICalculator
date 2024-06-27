@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function compoundInterest(principal, rate, years) {
   // Calculates compound interest
