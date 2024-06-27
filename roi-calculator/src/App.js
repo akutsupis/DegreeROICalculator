@@ -86,7 +86,6 @@ function ROICalculator({ title }) {
       <p>Total Cost: {Number(roi[1]).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
       <p>Net Earnings: {Number(roi[2]).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
       <p>Cost of loans with interest: {Number(roi[3]).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
-      <p>Logs: {roi[4].join(', ')}</p>
     </div>
   );
 }
