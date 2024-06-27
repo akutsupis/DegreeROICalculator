@@ -52,4 +52,15 @@ p {
   margin: 5px 0;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: row; /* Change this from column to row */
+  justify-content: space-around;
+}
+
+/* Add some margin to the ROICalculator components */
+.ROICalculator {
+  margin: 20px;
+}
+
 /* Add any additional styles or overrides here */
