@@ -81,10 +81,10 @@ function ROICalculator({ title, setRoi }) {
 }
 
 function ROIComparison({ roi1, roi2 }) {
-  let roiDiff = roi1[0] - roi2[0];
-  let totalCostDiff = roi1[1] - roi2[1];
-  let netEarningsDiff = roi1[2] - roi2[2];
-  let debtCostDiff = roi1[3] - roi2[3];
+  let roiDiff = Math.abs([0] - roi2[0]);
+  let totalCostDiff = Math.abs(roi1[1] - roi2[1]);
+  let netEarningsDiff = Math.abs(roi1[2] - roi2[2]);
+  let debtCostDiff = Math.abs([3] - roi2[3]);
 
   return (
     <div className="ROIComparison">
