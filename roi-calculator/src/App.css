@@ -1,9 +1,9 @@
 /* App.css */
 :root {
   --primary-color: #146093;
-  --secondary-color: #2ecc71;
+  --secondary-color: #1e363b;
   --background-color: #ecf0f1;
-  --text-color: #21374d;
+  --text-color: #1a2d3f;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .app-header h1 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 2.5em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
