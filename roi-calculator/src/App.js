@@ -40,34 +40,34 @@ function ROICalculator({ title, setRoi }) {
       <h2>{title}</h2>
       <form onSubmit={handleCalculate}>
         <label>
-          Initial Cost:
+          Your Program's Cost (Subtract Grants, but not Loans):
           <input type="number" value={initialCost} onChange={e => setInitialCost(e.target.value)} />
         </label>
         <label>
-          Time Investment (years):
+          Time Investment To Earn Degree (Years):
           <input type="number" value={timeSpent} onChange={e => setTimeSpent(e.target.value)} />
         </label>
         <label>
-          Annual Earnings:
+          Annual Earnings After Graduation (Averaged Over Time Period):
           <input type="number" value={annualEarnings} onChange={e => setAnnualEarnings(e.target.value)} />
         </label>
         <label>
-          Time Period (Years):
+          Time Period To Examine (Years From Today):
           <input type="number" value={years} onChange={e => setYears(e.target.value)} />
         </label>
         <label>
-          Total Debt Amount:
+          Total Debt Amount (Principal):
           <input type="number" value={debtAmount} onChange={e => setDebtAmount(e.target.value)} />
         </label>
         <label>
-          Interest Rate (%):
+          Annual Interest Rate (%):
           <input type="number" value={interestRate} onChange={e => setInterestRate(e.target.value)} />
         </label>
         <label>
-          Years to Pay Off Debt:
+          Anticipated Years To Pay Off Debt (Years):
           <input type="number" value={debtYears} onChange={e => setDebtYears(e.target.value)} />
         </label>
-        <button type="submit">Calculate ROI</button>
+        <button type="submit">Calculate</button>
       </form>
        <div className="output">
         <p><strong>ROI:</strong> {output[0].toFixed(2)}%</p>
