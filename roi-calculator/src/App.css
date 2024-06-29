@@ -1,66 +1,158 @@
 /* App.css */
-body {
-  font-family: Arial, sans-serif;
+:root {
+  --primary-color: #146093;
+  --secondary-color: #2ecc71;
+  --background-color: #ecf0f1;
+  --text-color: #21374d;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-div {
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.app-header h1 {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calculators-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.ROICalculator {
+  width: 45%;
+  margin: 10px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.ROICalculator h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 form {
-  max-width: 600px;
-  width: 100%;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
 input[type="number"] {
-  padding: 8px;
-  margin-top: 4px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
   border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
 }
 
 button {
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: white;
-  padding: 10px 15px;
-  margin: 10px 0;
+  padding: 12px 20px;
+  margin: 20px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
-  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #2980b9;
 }
 
-p {
-  margin: 5px 0;
+.output {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
 }
 
-.app-container {
-  display: flex;
-  flex-direction: row; /* Change this from column to row */
-  justify-content: space-around;
+.output p {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Add some margin to the ROICalculator components */
-.ROICalculator {
-  margin: 20px;
+.output p strong {
+  color: var(--primary-color);
 }
 
-/* Add any additional styles or overrides here */
+.ROIComparison {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.ROIComparison h2 {
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ROIComparison p {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .calculators-container {
+    flex-direction: column;
+  }
+
+  .ROICalculator {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
